@@ -32,12 +32,12 @@ async function main() {
 }
 
 async function sendmail() {
-    const user = "kelcrisp007@icloud.com";
-    const pass = "vlnacpdsjbcqpawn";
+    const user = "kelarcrisp@gmail.com";
+    const pass = "ktmpwttczguzetuh";
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // true for 465, false for other ports
+        port: 587,
+        secure: false, // true for 465, false for other ports
         auth: {
             user,
             pass
@@ -47,7 +47,7 @@ async function sendmail() {
 
     await transporter.sendMail({
         from: `"Kelar" <${user}>`,
-        to: "zaihad@brawlapi.cf",
+        to: "kelcrisp007@icloud.com",
         subject: 'Hello',
         text: 'price fell!!!',
         html: `<b>The price of ${url} feel down!</b>` // html body
