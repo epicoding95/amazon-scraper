@@ -33,11 +33,11 @@ async function main() {
 
 async function sendmail() {
     const user = "kelcrisp007@icloud.com";
-    const pass = "suzuvpdvctdzswnp";
+    const pass = "vlnacpdsjbcqpawn";
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
             user,
             pass
@@ -46,10 +46,10 @@ async function sendmail() {
 
 
     await transporter.sendMail({
-        from: `Kelar" <${user}>`, // sender address
-        to: 'koc33@frontier.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'price fell!!!', // plain text body
+        from: `"Kelar" <${user}>`,
+        to: "zaihad@brawlapi.cf",
+        subject: 'Hello',
+        text: 'price fell!!!',
         html: `<b>The price of ${url} feel down!</b>` // html body
     });
     console.log("mail sent!")
