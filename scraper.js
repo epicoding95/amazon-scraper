@@ -2,6 +2,8 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const nodemailer = require('nodemailer');
+const db = require('./db');
+
 console.log("xzxzxzxzx");
 const url = ("https://www.amazon.com/Apple-27-inch-display-8th-generation-processor/dp/B07Q1NBCVB/ref=sr_1_3?keywords=mac+27+inch&qid=1569001461&sr=8-3");
 //just google my user agent to find user agent ID
@@ -29,6 +31,7 @@ async function main() {
         await sendmail();
 
     }
+    console.log(newPrice);
 }
 
 async function sendmail() {
